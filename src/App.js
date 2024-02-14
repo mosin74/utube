@@ -1,10 +1,13 @@
+import HomeComponent from "./component/HomeComponent";
+
 const { createBrowserRouter } = require("react-router-dom");
 const { default: HeaderComponent } = require("./component/HeaderComponent");
 
 const AppLayout =()=>(
-  <HeaderComponent>
-
-  </HeaderComponent>
+  <>
+  <HeaderComponent/>
+  <HomeComponent/>
+  </>
 
 )
 
