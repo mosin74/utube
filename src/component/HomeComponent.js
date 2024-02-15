@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import VideoCard from '../Utils/VideoCard'
 import useVideoList from '../Hooks/useVideoList'
 import Shimmer from './Shimmer';
@@ -6,12 +6,14 @@ import { IoMdHome } from "react-icons/io";
 import { SiYoutubeshorts } from "react-icons/si";
 import { LiaYoutubeSquare } from "react-icons/lia";
 import { MdOutlineSubscriptions } from "react-icons/md";
+import { VideoContext } from '../context/Video';
 
 
 const HomeComponent = () => {
 
-    const videolist = useVideoList();
-    console.log(videolist);
+    const VideoListState = useContext(VideoContext)
+    const videolist = useVideoList(VideoListState?.videolist,VideoListState?.setVideolist);
+    console.log(VideoListState);
 
     return (<>
         {
@@ -44,7 +46,7 @@ const HomeComponent = () => {
                                 <button className='bg-gray-300  p-1 px-4 mx-2 rounded-xl border  border-gray-300 text-black' >Instagram</button>
                                 <button className='bg-gray-300  p-1 px-4 mx-2 rounded-xl border  border-gray-300 text-black' >LinkdIn</button>
                             </div>
-                            <div className=' flex flex-wrap w-12/12 bg-white  my-2'>
+                            <div className=' flex flex-wrap w-12/12 bg-white  my-2 '>
                                 {
                                     videolist.map((video) => {
                                         return (

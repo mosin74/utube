@@ -1,6 +1,6 @@
 import React from 'react'
 import { AiOutlineMenu } from "react-icons/ai";
-import { YOUTUBE_IMG } from '../config/Helper';
+import { YOUTUBE_IMG } from '../config/Const';
 
 const HeaderLeftDiv = () => {
   return (

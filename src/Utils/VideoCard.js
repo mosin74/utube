@@ -6,7 +6,7 @@ const VideoCard = ({ snippet ,statistics}) => {
     // console.log(statistics)
 
     return (
-        <div className='mx-auto  rounded-xl border border-gray-400 my-2  overflow-hidden'>
+        <div className='rounded-xl border border-gray-400 my-2 mx-2  overflow-hidden'>
             <div className='mx-2  w-64 m-2'>
                 <img src={snippet?.thumbnails?.medium.url} alt="" />
                 <p className='  text-sm font-sans  font-semibold px-2'>{snippet?.title} </p>
